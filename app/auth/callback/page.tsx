@@ -10,6 +10,7 @@ export default function AuthCallbackPage() {
     const handleAuth = async () => {
       // Supabase automatically parses tokens from URL
       // @ts-ignore
+        // @ts-ignore
       const { error } = await supabaseBrowser.auth.getSession();
       if (!error) {
         // redirect to manager panel
