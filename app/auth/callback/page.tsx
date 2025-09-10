@@ -9,7 +9,7 @@ export default function AuthCallbackPage() {
   useEffect(() => {
     const handleAuth = async () => {
       // Supabase automatically parses tokens from URL
-      const { error } = await supabaseBrowser.auth.getSessionFromUrl();
+      const { error } = await supabaseBrowser.auth.getSession();
       if (!error) {
         // redirect to manager panel
         router.replace('/manager');
